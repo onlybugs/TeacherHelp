@@ -21,7 +21,7 @@ GetJiGe = function(df,ap)
   brt <- rt[,2:ncol(rt)]
   brt$type <- ifelse(brt$math < 90,"bad",
                      ifelse(brt$math < 120,"normal",'good'))
-  
+  # get jg and yx
   jgrate <- round((ap-table(brt$type)['bad'])/ap * 100,2)
   yxrate <- round(table(brt$type)['good']/ap * 100,2)
   
